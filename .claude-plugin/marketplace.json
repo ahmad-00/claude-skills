@@ -8,7 +8,7 @@
       "name": "senior-engineers",
       "source": "./plugins/senior-engineers",
       "description": "Generic senior-engineer skills: Django backend, Next.js frontend, iOS SwiftUI, Android Kotlin, and GCP DevOps",
-      "version": "1.0.0"
+      "version": "1.1.0"
     }
   ]
 }
