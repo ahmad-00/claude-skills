@@ -1,0 +1,14 @@
+{
+  "name": "eng-skills",
+  "owner": {
+    "name": "Ahmad"
+  },
+  "plugins": [
+    {
+      "name": "senior-engineers",
+      "source": "./plugins/senior-engineers",
+      "description": "Generic senior-engineer skills: Django backend, Next.js frontend, iOS SwiftUI, Android Kotlin, and GCP DevOps",
+      "version": "2.0.0"
+    }
+  ]
+}

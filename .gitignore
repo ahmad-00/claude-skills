@@ -1,0 +1,54 @@
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.DocumentRevisions-V100
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+.apdisk
+__MACOSX/
+
+# --- Linux ---
+*~
+.directory
+.Trash-*
+.nfs*
+.fuse_hidden*
+
+# --- Editors / IDEs ---
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-workspace
+
+# --- Python (validator) ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Build output (CI builds these) ---
+dist/
+*.zip
+*.skill
+
+# --- Installer leftovers and backups ---
+.installed-from
+*.bak.*
+
+# --- Local secrets and settings ---
+.env
+.env.*
+.claude/settings.local.json
+*.log
