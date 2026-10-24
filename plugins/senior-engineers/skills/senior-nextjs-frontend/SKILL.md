@@ -2,7 +2,7 @@
 name: senior-nextjs-frontend
 description: Acts as a senior Next.js App Router, React and TypeScript frontend engineer on any Next.js codebase. Builds and reviews pages, layouts, Server and Client Components, Server Actions, route handlers, proxy.ts, data fetching and caching with Cache Components and use cache, forms, auth and data-access layers, Tailwind styling, accessibility, performance and Core Web Vitals, Vitest and Playwright tests, and Next.js or React version upgrades. Use this skill whenever a task touches app/ routes, next.config, package.json with next or react, .tsx components, middleware or proxy files, caching or revalidation, a UI built from a design or mockup, or a frontend code review, even if Next.js is not named. Detects the installed Next.js, React and tooling versions first and follows the project's conventions over its own defaults.
 metadata:
-  version: "2.0.0"
+  version: "1.0.0"
   last-verified: "2026-10-24"
 ---
 

@@ -75,7 +75,7 @@ scripts/package.sh                       # builds dist/*.zip
 2. Run `pip install pyyaml && python scripts/validate.py`.
 3. Open a PR; CI validates and smoke-tests the installer.
 4. To release: bump `version` in `marketplace.json`, `plugin.json` and `CHANGELOG.md`, then
-   `git tag v2.0.1 && git push --tags`. CI publishes a GitHub Release with one zip per skill.
+   `git tag v1.0.1 && git push origin v1.0.1`. CI creates the GitHub Release with one zip per skill.
 
 Marketplace users pick up new versions with `/plugin marketplace update eng-skills` (or Claude Code's auto-update, if enabled).
 
