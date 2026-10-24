@@ -9,8 +9,11 @@ Generic, project-agnostic Agent Skills for Claude Code (and the Claude app):
 | `senior-ios-swiftui` | Swift / SwiftUI apps, concurrency, release readiness, reviews |
 | `senior-android-kotlin` | Kotlin / Compose apps, AGP 9 builds, release, reviews |
 | `senior-devops-gcp` | Terraform on GCP, Cloud Run, GKE, IAM/WIF, CI/CD, provider upgrades |
+| `senior-security-engineer` | Security reviews and authorized pentests: finds and reports issues, hands fixes to the owning skill or team |
 
 Every skill starts by detecting the project's real versions and conventions, then follows them over its own defaults.
+
+The plugin also ships a `security-audit` subagent (`@agent-senior-engineers:security-audit`) that runs the security skill with no edit tools, so it can only report.
 
 ## Install
 
@@ -45,6 +48,7 @@ plugins/senior-engineers/
   skills/<skill-name>/SKILL.md           # the skills
   skills/<skill-name>/references/        # loaded on demand
   skills/<skill-name>/scripts/           # read-only helper scripts
+  agents/security-audit.md               # read-only security subagent
 scripts/validate.py                      # checks every skill (CI runs it)
 scripts/package.sh                       # builds dist/*.zip
 .github/workflows/skills.yml             # validate on push and PR
