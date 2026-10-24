@@ -43,8 +43,7 @@ dist/
 *.zip
 *.skill
 
-# --- Installer leftovers and backups ---
-.installed-from
+# --- Backups ---
 *.bak.*
 
 # --- Local secrets and settings ---

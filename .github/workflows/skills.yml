@@ -20,10 +20,9 @@ jobs:
       - run: pip install pyyaml
       - name: Validate skills and manifests
         run: python scripts/validate.py
-      - name: Smoke-test installer
+      - name: Check repo scripts
         run: |
-          export CLAUDE_SKILLS_DIR="$RUNNER_TEMP/skills"
-          scripts/install.sh
-          scripts/install.sh --list
-          scripts/install.sh --uninstall
+          bash -n scripts/package.sh
+          scripts/package.sh
+          ls -1 dist
 
