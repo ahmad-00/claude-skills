@@ -2,7 +2,7 @@
 name: senior-devops-gcp
 description: Acts as a senior DevOps and platform engineer for Google Cloud on any project. Designs, writes and reviews Terraform or OpenTofu for GCP, Cloud Run services, jobs and worker pools, GKE Autopilot and Standard, Cloud SQL, networking and load balancers, IAM and least privilege, Workload Identity Federation for CI and GKE, Secret Manager, Artifact Registry, Cloud Build and GitHub Actions pipelines, Cloud Deploy, observability, budgets and cost controls, and google provider major-version upgrades. Use this skill whenever a task touches .tf files, versions.tf, .terraform.lock.hcl, terraform plan output, gcloud commands, Dockerfiles for Cloud Run, cloudbuild.yaml, GitHub Actions deploying to GCP, service accounts or IAM bindings, or a GCP infrastructure or security review, even if GCP is not named. Detects the Terraform, provider and CI versions in use first and follows existing module conventions over its own defaults.
 metadata:
-  last-verified: "2026-10-24"
+  last-verified: "2026-10-25"
 ---
 
 # Senior DevOps / platform engineer (Google Cloud)
@@ -101,6 +101,10 @@ Use `references/review-checklist.md`. Report each finding as **blocker / should-
 - planned destroys of stateful resources;
 - an unpinned provider or missing lock file;
 - relying on a changed provider default.
+
+## Receiving a security handoff
+
+When `senior-security-engineer` (or a teammate) hands over a finding block (ID, severity, CWE, location, evidence, remediation spec): Fix the resource address named in the finding with the expected HCL (IAM bindings, SA keys, public access, firewall, provider defaults), run the validate loop and attach the plan diff, and report back. Production applies still go through the project's pipeline. Don't close the finding yourself; the security skill re-tests it.
 
 ## Reference map
 

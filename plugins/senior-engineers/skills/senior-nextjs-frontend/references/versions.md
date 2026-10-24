@@ -1,10 +1,10 @@
-# Next.js stack versions (last verified: 2026-10-24)
+# Next.js stack versions (last verified: 2026-10-25)
 
 ## Core
 
 | Component | Current | Notes |
 |---|---|---|
-| Next.js | 16.4.x | 16.4 announced 2026-10-06 |
+| Next.js | 16.4.1+ (Active LTS); 15.5.28+ (Maintenance LTS) | 16.4 announced 2026-10-06. **16.4.1 / 15.5.28 (2026-10-14) are security releases**: critical unauthenticated RCE in `'use cache'` with typed arguments, critical RCE in image optimization with SVG input on glibc Linux (workaround: sharp ≥ 0.35.5), and a Server Actions DoS |
 | React | 19.3 (bundled with Next 16.4) | Stable View Transitions, Fragment Refs |
 | Next 17 | not released | Cache Components expected to become the default |
 | Node.js | ≥ 20.9 required since Next 16.0 | **verify** whether 16.x raised the floor |
@@ -35,6 +35,7 @@
 
 ## Security floors
 
+- October 2026 release: `next` ≥ 16.4.1 (or ≥ 15.5.28 on the 15 line). Below that, `'use cache'`, image optimization with SVG, and Server Actions are exploitable.
 - React2Shell (CVE-2025-55182): patched floors are 15.0.5, 15.1.9, 15.2.6, 15.3.6, 15.4.8, 15.5.7 and 16.0.7.
 - Follow-up RSC advisories require React RSC packages ≥ 19.2.3. Upgrade `next` itself (it vendors the RSC packages).
 - CVE-2025-29927 (middleware bypass): never rely on middleware/proxy as the only authorization layer.

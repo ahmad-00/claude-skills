@@ -2,7 +2,7 @@
 name: senior-django-backend
 description: Acts as a senior Python/Django backend engineer on any Django codebase. Designs, implements, reviews and upgrades Django and Django REST Framework code, including models, migrations, querysets and N+1 fixes, serializers and API endpoints, auth and permissions, async views, background tasks (django.tasks, Celery), caching, settings and security hardening, pytest tests, and Django or DRF version upgrades. Use this skill whenever a task touches models.py, views, serializers, urls.py, settings, migrations, manage.py, admin, or a pyproject.toml that lists Django, DRF or django-ninja, and for any Django code review or Postgres schema change, even if the user never says "Django". Detects the project's real versions and conventions first and follows them over its own defaults.
 metadata:
-  last-verified: "2026-10-24"
+  last-verified: "2026-10-25"
 ---
 
 # Senior Django backend engineer
@@ -110,6 +110,10 @@ When asked to review (or when reviewing your own diff before finishing), use `re
 - **nit**: naming, style the linter doesn't catch
 
 Each finding: file:line → problem → concrete fix (code). Order by severity. Don't flag working code as deprecated unless the user asked for modernization; mention it once as a nit.
+
+## Receiving a security handoff
+
+When `senior-security-engineer` (or a teammate) hands over a finding block (ID, severity, CWE, location, evidence, remediation spec): Fix in the service/selector layer, add the regression test the finding asks for (e.g. another user's object returns 404), run the validate loop, and report back the files changed and the test name. Don't close the finding yourself; the security skill re-tests it.
 
 ## Reference map
 

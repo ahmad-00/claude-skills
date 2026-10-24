@@ -1,4 +1,4 @@
-# Django stack versions (last verified: 2026-10-24)
+# Django stack versions (last verified: 2026-10-25)
 
 Re-verify anything marked **verify** before relying on it.
 
@@ -6,10 +6,10 @@ Re-verify anything marked **verify** before relying on it.
 
 | Component | Current | Notes |
 |---|---|---|
-| Django 6.1 | 6.1.2 | Released 2026-08-05; Python 3.12–3.14; drops PostgreSQL 14; supported until 2027-12 |
+| Django 6.1 | 6.1.2 | Released 2026-08-05; Python 3.12–3.14; drops PostgreSQL 14; supported until 2027-12. 6.1.2 / 6.0.9 / 5.2.18 (2026-10-06) are security releases: DoS in language-variant lookup and HTTP header parsing, request forgery via byte values in spatial lookups, privilege abuse in model formsets with editable PKs. Treat anything older as a security finding |
 | Django 6.0 | 6.0.9 | Mainstream support ended 2026-08; security fixes until 2027-04 |
 | Django 5.2 LTS | 5.2.x | Supported until 2028-04 |
-| DRF | 3.18.x | 3.18.0 drops Django 4.2/5.0/5.1; list serializer (`many=True`) errors are now a dict |
+| DRF | 3.18.2+ | 3.18.0 drops Django 4.2/5.0/5.1; list serializer (`many=True`) errors are now a dict. 3.18.2 (2026-10-21) fixes a `JSONParser` upload-limit bypass and two DoS issues; 3.17.2 fixed an AdminRenderer data leak. Floor for security reviews: 3.18.2 |
 | DRF 3.17 | 3.17.0 | First release officially supporting Django 6.0 and Python 3.14; dropped Python 3.9 and coreapi |
 | Calendar versioning | DEP 20 | Majors after 6.x are named by year (e.g. "Django 2028") (**verify** final naming) |
 

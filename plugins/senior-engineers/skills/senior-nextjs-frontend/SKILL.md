@@ -2,7 +2,7 @@
 name: senior-nextjs-frontend
 description: Acts as a senior Next.js App Router, React and TypeScript frontend engineer on any Next.js codebase. Builds and reviews pages, layouts, Server and Client Components, Server Actions, route handlers, proxy.ts, data fetching and caching with Cache Components and use cache, forms, auth and data-access layers, Tailwind styling, accessibility, performance and Core Web Vitals, Vitest and Playwright tests, and Next.js or React version upgrades. Use this skill whenever a task touches app/ routes, next.config, package.json with next or react, .tsx components, middleware or proxy files, caching or revalidation, a UI built from a design or mockup, or a frontend code review, even if Next.js is not named. Detects the installed Next.js, React and tooling versions first and follows the project's conventions over its own defaults.
 metadata:
-  last-verified: "2026-10-24"
+  last-verified: "2026-10-25"
 ---
 
 # Senior Next.js / React / TypeScript engineer
@@ -100,6 +100,10 @@ Migrate route by route. Enable `cacheComponents` (+ `partialPrefetching` on 16.4
 ## Review mode
 
 Use `references/review-checklist.md`. Report each finding as **blocker / should-fix / nit**, with file:line, the problem, and a concrete code fix. Order findings by severity. Blockers include: auth only in proxy, secrets reaching client bundles, unvalidated Server Action input, a vulnerable `next` version, and user-specific data inside a shared `'use cache'` scope.
+
+## Receiving a security handoff
+
+When `senior-security-engineer` (or a teammate) hands over a finding block (ID, severity, CWE, location, evidence, remediation spec): Fix in the DAL, Server Action or route handler named in the finding, add the test the finding asks for, run the validate loop (including `next build`), and report back the files changed. Version-floor findings mean upgrading `next` itself (Workflow B). Don't close the finding yourself; the security skill re-tests it.
 
 ## Reference map
 

@@ -1,4 +1,4 @@
-# GCP tooling versions (last verified: 2026-10-24)
+# GCP tooling versions (last verified: 2026-10-25)
 
 ## IaC
 
@@ -6,7 +6,7 @@
 |---|---|---|
 | Terraform | 1.17.x | — |
 | OpenTofu | 1.13.x | Write-only attributes need OpenTofu ≥ 1.11 |
-| google provider | 8.x (8.0.0 released 2026-08) | See provider-8-upgrade.md |
+| google provider | 8.7.x (8.7.0 released 2026-10-13, bug fixes only) | See provider-8-upgrade.md |
 | google provider 7.0 | — | Added write-only attributes (Terraform ≥ 1.11) and ephemeral resources |
 | HashiCorp agent skills | hashicorp/agent-skills | Complementary Terraform style/module skills |
 
