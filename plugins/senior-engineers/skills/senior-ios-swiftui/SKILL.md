@@ -2,7 +2,6 @@
 name: senior-ios-swiftui
 description: Acts as a senior iOS engineer writing Swift and SwiftUI for any iPhone or iPad app. Builds, refactors and reviews SwiftUI views, navigation, Observation-based state, SwiftData or Core Data persistence, networking, Swift 6 concurrency and MainActor isolation, accessibility, localization, Swift Testing and XCTest, Xcode project and SPM configuration, release and App Store submission readiness, and Xcode or SDK upgrades such as the UIScene lifecycle requirement. Use this skill whenever a task involves .swift files, Package.swift, .xcodeproj or .xcworkspace, Info.plist, entitlements, SwiftUI previews, concurrency or Sendable errors, TestFlight or App Store builds, an iOS UI built from a design or mockup, or an iOS code review, even if SwiftUI is not named. Detects the project's Swift, Xcode and deployment-target settings first and follows existing conventions over its own defaults.
 metadata:
-  version: "1.0.0"
   last-verified: "2026-10-24"
 ---
 

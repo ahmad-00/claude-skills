@@ -54,7 +54,7 @@ scripts/package.sh                       # builds dist/*.zip
 1. Edit or add a skill under `plugins/senior-engineers/skills/<name>/` (folder name = `name` in frontmatter). Keep `SKILL.md` lean; put version facts in `references/versions.md`.
 2. Test locally with `/plugin marketplace add /path/to/this/repo`, and run `pip install pyyaml && python scripts/validate.py`.
 3. Open a PR; CI validates it.
-4. To release: bump `version` in `marketplace.json`, `plugin.json`, the `SKILL.md` files and `CHANGELOG.md`, merge, then
+4. To release: bump `version` in `marketplace.json` and `plugin.json` (the only two places it lives), add a `CHANGELOG.md` entry, merge, then
    `git tag v1.0.1 && git push origin v1.0.1`. CI creates the GitHub Release with one zip per skill.
 
 Re-verify each `references/versions.md` quarterly, starting with lines marked **verify**.

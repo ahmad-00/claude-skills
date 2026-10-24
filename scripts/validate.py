@@ -5,7 +5,8 @@ Checks: frontmatter present; name rules (<=64 chars, lowercase/digits/hyphens,
 matches folder, no reserved words); description (non-empty, <=1024 chars, no
 angle brackets); SKILL.md body <=500 lines; no README.md in skill folders;
 every references/ or scripts/ path mentioned in SKILL.md exists; shell scripts
-pass `bash -n`; marketplace.json and plugin.json parse and are consistent.
+pass `bash -n`; marketplace.json and plugin.json parse and carry the same version
+(SKILL.md must not carry a version of its own).
 Exit code 1 if anything fails. Requires PyYAML (pip install pyyaml).
 """
 import json
@@ -87,6 +88,8 @@ def check_skill(skill_dir: Path):
     md = fm.get("metadata") or {}
     if "last-verified" not in md:
         warnings.append(f"{rel}: add metadata.last-verified")
+    if "version" in md:
+        err(f"{rel}: remove metadata.version; the plugin version lives in marketplace.json and plugin.json only")
     print(f"ok  {name or rel}  ({len(desc)} char description, {lines} line body)")
 
 
@@ -112,7 +115,8 @@ def check_manifests():
             if meta.get("name") != p.get("name"):
                 err(f"plugin '{p.get('name')}': name differs from plugin.json ('{meta.get('name')}')")
             if meta.get("version") != p.get("version"):
-                warnings.append(f"plugin '{p.get('name')}': version differs between marketplace.json and plugin.json")
+                err(f"plugin '{p.get('name')}': version differs between marketplace.json "
+                    f"('{p.get('version')}') and plugin.json ('{meta.get('version')}')")
 
 
 def main():

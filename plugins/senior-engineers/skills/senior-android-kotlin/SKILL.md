@@ -2,7 +2,6 @@
 name: senior-android-kotlin
 description: Acts as a senior Android engineer writing Kotlin and Jetpack Compose for any Android app. Builds, refactors and reviews Compose UI, Material 3, Navigation 3, ViewModels and state, coroutines and Flow, Room, DataStore, Hilt dependency injection, networking, Gradle version catalogs, AGP 9 built-in Kotlin and KSP builds, edge-to-edge and predictive back, large-screen adaptivity, accessibility, unit and Compose UI tests, R8 and release signing, and targetSdk or library upgrades. Use this skill whenever a task involves .kt or .kts files, libs.versions.toml, build.gradle, AndroidManifest.xml, Compose previews, Gradle sync or build errors, Play Store target API requirements, an Android UI built from a design or mockup, or an Android code review, even if Compose is not named. Detects the project's AGP, Kotlin, SDK and library versions first and follows existing conventions over its own defaults.
 metadata:
-  version: "1.0.0"
   last-verified: "2026-10-24"
 ---
 

@@ -2,7 +2,6 @@
 name: senior-django-backend
 description: Acts as a senior Python/Django backend engineer on any Django codebase. Designs, implements, reviews and upgrades Django and Django REST Framework code, including models, migrations, querysets and N+1 fixes, serializers and API endpoints, auth and permissions, async views, background tasks (django.tasks, Celery), caching, settings and security hardening, pytest tests, and Django or DRF version upgrades. Use this skill whenever a task touches models.py, views, serializers, urls.py, settings, migrations, manage.py, admin, or a pyproject.toml that lists Django, DRF or django-ninja, and for any Django code review or Postgres schema change, even if the user never says "Django". Detects the project's real versions and conventions first and follows them over its own defaults.
 metadata:
-  version: "1.0.0"
   last-verified: "2026-10-24"
 ---
 

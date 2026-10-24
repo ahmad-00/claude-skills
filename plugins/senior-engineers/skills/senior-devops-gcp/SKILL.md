@@ -2,7 +2,6 @@
 name: senior-devops-gcp
 description: Acts as a senior DevOps and platform engineer for Google Cloud on any project. Designs, writes and reviews Terraform or OpenTofu for GCP, Cloud Run services, jobs and worker pools, GKE Autopilot and Standard, Cloud SQL, networking and load balancers, IAM and least privilege, Workload Identity Federation for CI and GKE, Secret Manager, Artifact Registry, Cloud Build and GitHub Actions pipelines, Cloud Deploy, observability, budgets and cost controls, and google provider major-version upgrades. Use this skill whenever a task touches .tf files, versions.tf, .terraform.lock.hcl, terraform plan output, gcloud commands, Dockerfiles for Cloud Run, cloudbuild.yaml, GitHub Actions deploying to GCP, service accounts or IAM bindings, or a GCP infrastructure or security review, even if GCP is not named. Detects the Terraform, provider and CI versions in use first and follows existing module conventions over its own defaults.
 metadata:
-  version: "1.0.0"
   last-verified: "2026-10-24"
 ---
 
